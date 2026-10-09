@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #171923;
+  color: #f8fafc;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  color: white;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  font-weight: 600;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  padding: 36px 6%;
+  color: #f8fafc;
+  transition: background-color 0.25s;
+}
+
+.hero {
+  text-align: center;
+  margin: 10px auto 32px;
+}
+
+.eyebrow {
+  color: #c4b5fd;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin: 12px 0;
+}
+
+.hero > p:last-child,
+.muted {
+  color: #aab4c5;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 1.3em;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.settings-grid label,
+.date-label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #d8def0;
+  font-weight: 500;
+}
+
+.settings-grid input[type="color"] {
+  width: 100%;
+  height: 42px;
+  padding: 3px;
+}
+
+input,
+select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  color: #f8fafc;
+  background: #252b39;
+  border: 1px solid #414b60;
+  border-radius: 9px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.15);
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #8b5cf6;
+}
+
+input[type="color"] {
+  cursor: pointer;
+}
+
+input[type="date"] {
+  color-scheme: dark;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.entry-form {
+  display: flex;
+  gap: 10px;
+}
+
+.entry-form input {
+  flex: 1;
+}
+
+.todo-list,
+.assessment-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+}
+
+.todo-list li,
+.assessment-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+  border: 1px solid #343c4d;
+  border-radius: 12px;
+  background: rgba(15, 18, 28, 0.55);
+}
+
+.todo-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: #8993a5;
+}
+
+.delete-btn {
+  flex-shrink: 0;
+  background: #482631;
+  color: #fda4af;
+  padding: 8px 12px;
+}
+
+.assessment-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.assessment-card h3 {
+  margin: 0 0 7px;
+  font-size: 1.05em;
+}
+
+.assessment-card p {
+  margin: 0 0 7px;
+  color: #c4b5fd;
+}
+
+.assessment-card time {
+  color: #aab4c5;
+  font-size: 0.85em;
+}
+
+.empty {
+  padding: 18px;
+  color: #aab4c5;
+  text-align: center;
+  background: rgba(15, 18, 28, 0.4);
+  border-radius: 10px;
+}
+
+footer {
+  padding: 12px;
+  color: #aab4c5;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .app {
+    padding: 24px 16px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .entry-form {
+    flex-direction: column;
+  }
+}
